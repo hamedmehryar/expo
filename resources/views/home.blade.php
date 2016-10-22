@@ -6,7 +6,7 @@
  */
 
 $event_path      = url('event') .'/';
-$image_path = URL::asset('image/event') .'/';
+$image_path = URL::secure_asset('image/event') .'/';
 
 $cssVersion = '1.0.0';
 $jsVersion  = '1.0.0';
@@ -14,7 +14,7 @@ $jsVersion  = '1.0.0';
 @extends('web-app')
 
 @section('head')
-    <link rel="stylesheet" href="{{ URL::asset('css/home.css?v='. $cssVersion) }}">
+    <link rel="stylesheet" href="{{ URL::secure_asset('css/home.css?v='. $cssVersion) }}">
 @stop
 
 @section('navbar-title')
@@ -23,7 +23,7 @@ $jsVersion  = '1.0.0';
 
 
 @section('content')
-    <div class="parallax" style="background: url({{ URL::asset('image/expo-bg.jpg') }}),linear-gradient(50deg, #ff4169 0, #7c26f8 100%);"></div>
+    <div class="parallax" style="background: url({{ URL::secure_asset('image/expo-bg.jpg') }}),linear-gradient(50deg, #ff4169 0, #7c26f8 100%);"></div>
     <div class="map-container" style="">
         <div class="announcement">
             <h1>Select an event and book a Stand Space</h1>
@@ -73,5 +73,5 @@ $jsVersion  = '1.0.0';
         img_path: "{{ $image_path }}"
     };
 </script>
-<script src="{{ URL::asset('js/home.js?v='. $jsVersion) }}"></script>
+<script src="{{ URL::secure_asset('js/home.js?v='. $jsVersion) }}"></script>
 @stop

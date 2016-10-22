@@ -9,13 +9,13 @@ $cssVersion    = '1.0.0';
 $jsVersion     = '1.0.0';
 
 $reservedSymbol  = '&#x2714;';
-$userAssetsDir = URL::secure_asset('user-assets');
+$userAssetsDir = URL::secureAsset('user-assets');
 
 ?>
 @extends('web-app')
 
 @section('head')
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/event/index.css?v='. $cssVersion) }}">
+    <link rel="stylesheet" href="{{ URL::secureAsset('css/event/index.css?v='. $cssVersion) }}">
 @stop
 
 @section('nav-bar-attachment'){{ 'static' }}@stop
@@ -74,7 +74,7 @@ $userAssetsDir = URL::secure_asset('user-assets');
 var
     jsFooterParams = {
         fetchUrl: "{{ route('stand')  }}",
-        imageUrl: "{{ URL::secure_asset('image/stand/') }}",
+        imageUrl: "{{ URL::secureAsset('image/stand/') }}",
         reservationUrl: "{{ route('reservation')  }}",
         profileLogoUrl: "{{ \App\User::urlToLogo('$user_dir', '$user_logo') }}",
         adminUrl: "{{ route('admin')  }}",
@@ -114,5 +114,5 @@ var
         }
     };
 </script>
-<script src="{{ URL::secure_asset('js/event/index.js?v='. $jsVersion) }}"></script>
+<script src="{{ URL::secureAsset('js/event/index.js?v='. $jsVersion) }}"></script>
 @stop

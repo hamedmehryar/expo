@@ -19,7 +19,7 @@ $jsVersion  = '1.0.0';
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/global.css?v='. $cssVersion) }}">
+    <link rel="stylesheet" href="{{ URL::secureAsset('css/global.css?v='. $cssVersion) }}">
     @yield('head')
 </head>
 <body>
@@ -48,6 +48,6 @@ $jsVersion  = '1.0.0';
 <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.validation/0.7.1/backbone-validation-min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="{{ URL::secure_asset('js/global.js?v='. $jsVersion ) }}"></script>
+<script src="{{ URL::secureAsset('js/global.js?v='. $jsVersion ) }}"></script>
 @yield('footer')
 </html>

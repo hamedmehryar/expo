@@ -31,7 +31,6 @@ $jsVersion  = '1.0.0';
         <div class="circle-container">
             <div class="middle-elem">.</div>
             <div class="articles">
-                {{dd($events)}}
             @foreach($events as $event)
                 <article class="event" id="{{ $event->code }}" data-itype="{{ $event->image_type }}">
                     <div class="title">
